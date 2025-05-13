@@ -159,11 +159,33 @@
 // Простое состояние для модального окна
 const showModal = ref(false);
 
-// Простой обработчик отправки формы
-const handleFormSubmit = (formData) => {
-  console.log("Отправленные данные:", formData);
-  alert(
-    "Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время."
-  );
+// Обработчик отправки формы
+const handleFormSubmit = async (formData) => {
+  try {
+    const response = await fetch("http://api.engraveart.space/api/orders", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        customerName: formData.name,
+        phoneNumber: formData.phone,
+        text: formData.description,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Ошибка при отправке заявки");
+    }
+
+    alert(
+      "Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время."
+    );
+  } catch (error) {
+    console.error("Ошибка:", error);
+    alert(
+      "Произошла ошибка при отправке заявки. Пожалуйста, попробуйте позже."
+    );
+  }
 };
 </script>

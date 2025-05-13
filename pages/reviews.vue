@@ -54,8 +54,30 @@
 const showReviewModal = ref(false);
 
 // Обработчик отправки отзыва
-const handleReviewSubmit = (formData) => {
-  console.log("Отправлен отзыв:", formData);
-  alert("Спасибо за ваш отзыв! Он будет опубликован после модерации.");
+const handleReviewSubmit = async (formData) => {
+  try {
+    const response = await fetch("http://api.engraveart.space/api/reviews", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        text: formData.text,
+        name: formData.name,
+        stars: formData.rating,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Ошибка при отправке отзыва");
+    }
+
+    alert("Спасибо за ваш отзыв! Он будет опубликован после модерации.");
+  } catch (error) {
+    console.error("Ошибка:", error);
+    alert(
+      "Произошла ошибка при отправке отзыва. Пожалуйста, попробуйте позже."
+    );
+  }
 };
 </script>
