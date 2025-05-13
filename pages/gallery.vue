@@ -19,7 +19,7 @@
         <div class="overflow-hidden bg-white rounded-lg shadow-lg group">
           <div class="relative h-64 overflow-hidden">
             <img
-              src="/assets/images/example1.jpg"
+              src="/assets/images/example1.JPG"
               alt="Гравировка на тактическом ноже"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
