@@ -11,7 +11,7 @@
       </div>
       <div>
         <NuxtLink to="/">
-          <p class="font-semibold text-4xl">engraveArt</p>
+          <p class="font-semibold text-4xl">engraveArt тест</p>
         </NuxtLink>
       </div>
       <div class="flex justify-between gap-20">
