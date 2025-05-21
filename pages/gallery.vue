@@ -8,7 +8,7 @@
       <p class="text-xl text-center text-gray-600 max-w-3xl mx-auto">
         Это реальные примеры наших работ. Каждое изделие уникально и создано с
         особым вниманием к деталям. Мы гордимся качеством нашей гравировки и
-        рады поделиться результатами с вами.
+        рады поделиться результатами с вами
       </p>
     </div>
 
@@ -32,7 +32,7 @@
               Гравировка на задней панели телефона
             </h3>
             <p class="text-gray-600 mb-3">
-              Персонализированная гравировка с узором на задней панели телефона.
+              Персонализированная гравировка с узором на задней панели телефона
             </p>
             <div class="flex justify-between items-center">
               <span
@@ -59,11 +59,11 @@
           </div>
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Ювелирная гравировка на металле
+              Гравировка на любом металле
             </h3>
             <p class="text-gray-600 mb-3">
-              Точная надпись, выполненная с ювелирной точностью на металлической
-              поверхности.
+              Точная надпись, выполненная с особой детализацией на металлической
+              поверхности
             </p>
             <div class="flex justify-between items-center">
               <span
@@ -121,11 +121,11 @@
           </div>
           <div class="p-6">
             <h3 class="text-xl font-semibold mb-2 text-gray-800">
-              Ювелирная гравировка на металле
+              Гравировка на любом металле
             </h3>
             <p class="text-gray-600 mb-3">
-              Точная надпись, выполненная с ювелирной точностью на металлической
-              поверхности.
+              Точная надпись, выполненная с особой детализацией на металлической
+              поверхности
             </p>
             <div class="flex justify-between items-center">
               <span
@@ -134,6 +134,66 @@
                 Металл
               </span>
               <span class="text-blue-600 font-medium">Сталь</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 5 -->
+        <div class="overflow-hidden bg-white rounded-lg shadow-lg group">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="/assets/images/steklo.JPG"
+              alt="Гравировка на тактическом ноже"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            ></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Гравировка на стекле
+            </h3>
+            <p class="text-gray-600 mb-3">
+              Утонченная гравировка с индивидуальным узором на стеклянной поверхности
+            </p>
+            <div class="flex justify-between items-center">
+              <span
+                class="inline-block bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm"
+              >
+                Стекло
+              </span>
+              <span class="text-blue-600 font-medium">Стекло</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 6 -->
+        <div class="overflow-hidden bg-white rounded-lg shadow-lg group">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="/assets/images/derevo.JPG"
+              alt="Гравировка на тактическом ноже"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+            ></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Гравировка на дереве
+            </h3>
+            <p class="text-gray-600 mb-3">
+              Ювелирная гравировка на деревянном изделии с вашим дизайном
+            </p>
+            <div class="flex justify-between items-center">
+              <span
+                class="inline-block bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm"
+              >
+                Дерево
+              </span>
+              <span class="text-blue-600 font-medium">Дуб</span>
             </div>
           </div>
         </div>
