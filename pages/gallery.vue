@@ -30,7 +30,9 @@
         >
           <!-- Слайд 1 -->
           <SwiperSlide>
-            <div class="overflow-hidden bg-white rounded-lg shadow-lg group h-full">
+            <div
+              class="overflow-hidden bg-white rounded-lg shadow-lg group h-full"
+            >
               <div class="relative h-64 overflow-hidden">
                 <img
                   src="/assets/images/example1.JPG"
@@ -46,7 +48,8 @@
                   Гравировка на задней панели телефона
                 </h3>
                 <p class="text-gray-600 mb-3">
-                  Персонализированная гравировка с узором на задней панели телефона
+                  Персонализированная гравировка с узором на задней панели
+                  телефона
                 </p>
                 <div class="flex justify-between items-center">
                   <span
@@ -62,7 +65,9 @@
 
           <!-- Слайд 2 -->
           <SwiperSlide>
-            <div class="overflow-hidden bg-white rounded-lg shadow-lg group h-full">
+            <div
+              class="overflow-hidden bg-white rounded-lg shadow-lg group h-full"
+            >
               <div class="relative h-64 overflow-hidden">
                 <img
                   src="assets/images/example2.JPG"
@@ -78,8 +83,8 @@
                   Гравировка на любом металле
                 </h3>
                 <p class="text-gray-600 mb-3">
-                  Точная надпись, выполненная с особой детализацией на металлической
-                  поверхности
+                  Точная надпись, выполненная с особой детализацией на
+                  металлической поверхности
                 </p>
                 <div class="flex justify-between items-center">
                   <span
@@ -95,7 +100,9 @@
 
           <!-- Слайд 3 -->
           <SwiperSlide>
-            <div class="overflow-hidden bg-white rounded-lg shadow-lg group h-full">
+            <div
+              class="overflow-hidden bg-white rounded-lg shadow-lg group h-full"
+            >
               <div class="relative h-64 overflow-hidden">
                 <img
                   src="assets/images/example3.JPG"
@@ -128,7 +135,9 @@
 
           <!-- Слайд 4 -->
           <SwiperSlide>
-            <div class="overflow-hidden bg-white rounded-lg shadow-lg group h-full">
+            <div
+              class="overflow-hidden bg-white rounded-lg shadow-lg group h-full"
+            >
               <div class="relative h-64 overflow-hidden">
                 <img
                   src="assets/images/example4.JPG"
@@ -144,8 +153,8 @@
                   Гравировка на любом металле
                 </h3>
                 <p class="text-gray-600 mb-3">
-                  Точная надпись, выполненная с особой детализацией на металлической
-                  поверхности
+                  Точная надпись, выполненная с особой детализацией на
+                  металлической поверхности
                 </p>
                 <div class="flex justify-between items-center">
                   <span
@@ -161,10 +170,12 @@
 
           <!-- Слайд 5 -->
           <SwiperSlide>
-            <div class="overflow-hidden bg-white rounded-lg shadow-lg group h-full">
+            <div
+              class="overflow-hidden bg-white rounded-lg shadow-lg group h-full"
+            >
               <div class="relative h-64 overflow-hidden">
                 <img
-                  src="/assets/images/steklo.JPG"
+                  src="assets/images/steklo.jpg"
                   alt="Гравировка на тактическом ноже"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -177,7 +188,8 @@
                   Гравировка на стекле
                 </h3>
                 <p class="text-gray-600 mb-3">
-                  Утонченная гравировка с индивидуальным узором на стеклянной поверхности
+                  Утонченная гравировка с индивидуальным узором на стеклянной
+                  поверхности
                 </p>
                 <div class="flex justify-between items-center">
                   <span
@@ -193,10 +205,12 @@
 
           <!-- Слайд 6 -->
           <SwiperSlide>
-            <div class="overflow-hidden bg-white rounded-lg shadow-lg group h-full">
+            <div
+              class="overflow-hidden bg-white rounded-lg shadow-lg group h-full"
+            >
               <div class="relative h-64 overflow-hidden">
                 <img
-                  src="/assets/images/derevo.JPG"
+                  src="assets/images/derevo.jpg"
                   alt="Гравировка на тактическом ноже"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -226,53 +240,103 @@
       </div>
     </div>
 
-<!-- Секция преимуществ -->
-<div class="container mx-auto px-4 mb-16">
-  <div class="bg-white rounded-lg shadow-lg p-8">
-    <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">
-      Почему выбирают нас
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
+    <!-- Секция преимуществ -->
+    <div class="container mx-auto px-4 mb-16">
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800 text-center">
+          Почему выбирают нас
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Высокое качество
+            </h3>
+            <p class="text-gray-600">
+              Используем современное лазерное оборудование для точной и
+              долговечной гравировки
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Быстрое выполнение
+            </h3>
+            <p class="text-gray-600">
+              Стандартные заказы выполняем за несколько дней, а срочные - в день
+              обращения
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Индивидуальный подход
+            </h3>
+            <p class="text-gray-600">
+              Работаем с любыми дизайнами и помогаем создать уникальный проект
+            </p>
+          </div>
         </div>
-        <h3 class="text-xl font-semibold mb-2 text-gray-800">Высокое качество</h3>
-        <p class="text-gray-600">Используем современное лазерное оборудование для точной и долговечной гравировки</p>
-      </div>
-      <div class="text-center">
-        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2 text-gray-800">Быстрое выполнение</h3>
-        <p class="text-gray-600">Стандартные заказы выполняем за несколько дней, а срочные - в день обращения</p>
-      </div>
-      <div class="text-center">
-        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2 text-gray-800">Индивидуальный подход</h3>
-        <p class="text-gray-600">Работаем с любыми дизайнами и помогаем создать уникальный проект</p>
       </div>
     </div>
-  </div>
-</div>
 
-  <!-- Кнопка для возврата на главную (размещена под всеми элементами) -->
-<div class="text-center mb-12">
-  <NuxtLink
-    to="/"
-    class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 shadow-lg"
-  >
-    Вернуться на главную
-  </NuxtLink>
-</div>
+    <!-- Кнопка для возврата на главную (размещена под всеми элементами) -->
+    <div class="text-center mb-12">
+      <NuxtLink
+        to="/"
+        class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-300 shadow-lg"
+      >
+        Вернуться на главную
+      </NuxtLink>
+    </div>
 
     <!-- Модальное окно формы связи -->
     <ContactModal v-model="showModal" @submit="handleFormSubmit" />
@@ -281,16 +345,16 @@
 
 <script setup>
 // Импорт Swiper и модулей
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 // Импорт стилей Swiper
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // Модули Swiper
-const modules = [Navigation, Pagination, Autoplay]
+const modules = [Navigation, Pagination, Autoplay];
 
 // Настройки breakpoints для адаптивности
 const breakpoints = {
@@ -309,8 +373,8 @@ const breakpoints = {
   1280: {
     slidesPerView: 3,
     spaceBetween: 30,
-  }
-}
+  },
+};
 
 // Простое состояние для модального окна
 const showModal = ref(false);
