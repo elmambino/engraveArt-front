@@ -96,12 +96,51 @@
             <h3 class="text-xl font-semibold mb-3 text-gray-800">
               Что мы предлагаем
             </h3>
-            <ul class="list-disc pl-5 text-gray-600 space-y-2">
-              <li>Персонализация подарков и сувениров</li>
-              <li>Создание уникальных изделий на заказ</li>
-              <li>Гравировка логотипов компаний</li>
-              <li>Нанесение штрих-кодов и QR-кодов</li>
-              <li>Изготовление именных табличек</li>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Персонализация подарков и сувениров
+                  </p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Создание уникальных изделий на заказ
+                  </p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Гравировка логотипов компаний
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Нанесение штрих-кодов и QR-кодов
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Изготовление именных табличек
+                  </p>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -109,14 +148,51 @@
             <h3 class="text-xl font-semibold mb-3 text-gray-800">
               Почему выбирают нас
             </h3>
-            <ul class="list-disc pl-5 text-gray-600 space-y-2">
-              <li>Высокая точность и качество гравировки</li>
-              <li>Индивидуальный подход к каждому заказу</li>
-              <li>
-                Работаем с любыми материалами: металл, дерево, стекло, кожа
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Высокая точность и качество гравировки
+                  </p>
+                </div>
               </li>
-              <li>Оперативное выполнение заказов</li>
-              <li>Доступные цены и система скидок для постоянных клиентов</li>
+              
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Индивидуальный подход к каждому заказу
+                  </p>
+                </div>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Работаем с любыми материалами: металл, дерево, стекло, кожа
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Оперативное выполнение заказов
+                  </p>
+                </div>
+              </li>
+
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-600 leading-relaxed">
+                    Доступные цены и система скидок для постоянных клиентов
+                  </p>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
