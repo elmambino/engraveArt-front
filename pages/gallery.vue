@@ -378,6 +378,4 @@ const breakpoints = {
 
 // Простое состояние для модального окна
 const showModal = ref(false);
-
-// Обработчик отправки формы
 </script>
