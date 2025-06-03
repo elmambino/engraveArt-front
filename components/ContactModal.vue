@@ -40,43 +40,63 @@
           </div>
 
           <form @submit.prevent="submitForm">
+            <!-- Поле ФИО -->
             <div class="mb-4">
-              <label for="name" class="block text-gray-700 font-medium mb-2"
-                >ФИО</label
-              >
+              <label for="name" class="block text-gray-700 font-medium mb-2">
+                ФИО
+              </label>
               <input
                 type="text"
                 id="name"
                 v-model="form.name"
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                @input="validateName"
+                @keypress="onlyLettersAndSpaces"
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-colors"
+                :class="nameError ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'"
+                placeholder="Иванов Иван Иванович"
                 required
               />
+              <p v-if="nameError" class="text-red-500 text-sm mt-1">
+                {{ nameError }}
+              </p>
             </div>
 
+            <!-- Поле телефона -->
             <div class="mb-4">
-              <label for="phone" class="block text-gray-700 font-medium mb-2"
-                >Номер телефона</label
-              >
+              <label for="phone" class="block text-gray-700 font-medium mb-2">
+                Номер телефона
+              </label>
               <input
                 type="tel"
                 id="phone"
                 v-model="form.phone"
-                class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                @input="formatPhone"
+                @keypress="onlyNumbers"
+                class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 transition-colors"
+                :class="phoneError ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'"
+                placeholder="+7 (999) 999-99-99"
+                maxlength="18"
                 required
               />
+              <p v-if="phoneError" class="text-red-500 text-sm mt-1">
+                {{ phoneError }}
+              </p>
             </div>
 
+            <!-- Поле описания -->
             <div class="mb-6">
               <label
                 for="description"
                 class="block text-gray-700 font-medium mb-2"
-                >Описание заказа</label
               >
+                Описание заказа
+              </label>
               <textarea
                 id="description"
                 v-model="form.description"
                 rows="4"
                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Опишите ваш заказ подробнее..."
                 required
               ></textarea>
             </div>
@@ -91,7 +111,8 @@
               </button>
               <button
                 type="submit"
-                class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none transition-colors"
+                :disabled="!isFormValid"
+                class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
                 Отправить
               </button>
@@ -120,14 +141,154 @@ const form = ref({
   description: "",
 });
 
+// Ошибки валидации
+const nameError = ref("");
+const phoneError = ref("");
+
+// Валидация ФИО
+const validateName = () => {
+  const nameValue = form.value.name.trim();
+  
+  if (!nameValue) {
+    nameError.value = "Поле ФИО обязательно для заполнения";
+    return false;
+  }
+  
+  // Проверка на минимальное количество слов (имя и фамилия)
+  const words = nameValue.split(/\s+/).filter(word => word.length > 0);
+  if (words.length < 2) {
+    nameError.value = "Введите фамилию и имя";
+    return false;
+  }
+  
+  // Проверка на допустимые символы (только буквы, пробелы, дефисы)
+  const nameRegex = /^[а-яёА-ЯЁa-zA-Z\s\-]+$/;
+  if (!nameRegex.test(nameValue)) {
+    nameError.value = "ФИО может содержать только буквы, пробелы и дефисы";
+    return false;
+  }
+  
+  nameError.value = "";
+  return true;
+};
+
+// Валидация телефона
+const validatePhone = () => {
+  const phoneValue = form.value.phone.replace(/\D/g, "");
+  
+  if (!phoneValue) {
+    phoneError.value = "Поле телефона обязательно для заполнения";
+    return false;
+  }
+  
+  if (phoneValue.length !== 11) {
+    phoneError.value = "Номер телефона должен содержать 11 цифр";
+    return false;
+  }
+  
+  if (!phoneValue.startsWith("7") && !phoneValue.startsWith("8")) {
+    phoneError.value = "Номер должен начинаться с 7 или 8";
+    return false;
+  }
+  
+  phoneError.value = "";
+  return true;
+};
+
+// Форматирование телефона с маской
+const formatPhone = (event) => {
+  let value = event.target.value.replace(/\D/g, "");
+  
+  // Ограничиваем длину до 11 цифр
+  if (value.length > 11) {
+    value = value.slice(0, 11);
+  }
+  
+  // Автоматически добавляем 7, если пользователь начал с 8
+  if (value.startsWith("8")) {
+    value = "7" + value.slice(1);
+  }
+  
+  // Если номер не начинается с 7, добавляем 7
+  if (value.length > 0 && !value.startsWith("7")) {
+    value = "7" + value;
+  }
+  
+  // Применяем маску
+  let formattedValue = "";
+  if (value.length > 0) {
+    formattedValue = "+7";
+    if (value.length > 1) {
+      formattedValue += " (" + value.slice(1, 4);
+      if (value.length > 4) {
+        formattedValue += ") " + value.slice(4, 7);
+        if (value.length > 7) {
+          formattedValue += "-" + value.slice(7, 9);
+          if (value.length > 9) {
+            formattedValue += "-" + value.slice(9, 11);
+          }
+        }
+      }
+    }
+  }
+  
+  form.value.phone = formattedValue;
+  validatePhone();
+};
+
+// Разрешить только цифры для телефона
+const onlyNumbers = (event) => {
+  const char = String.fromCharCode(event.which);
+  if (!/[0-9]/.test(char)) {
+    event.preventDefault();
+  }
+};
+
+// Разрешить только буквы, пробелы и дефисы для ФИО
+const onlyLettersAndSpaces = (event) => {
+  const char = String.fromCharCode(event.which);
+  if (!/[а-яёА-ЯЁa-zA-Z\s\-]/.test(char)) {
+    event.preventDefault();
+  }
+};
+
+// Проверка валидности всей формы
+const isFormValid = computed(() => {
+  return (
+    form.value.name.trim() !== "" &&
+    form.value.phone.trim() !== "" &&
+    form.value.description.trim() !== "" &&
+    nameError.value === "" &&
+    phoneError.value === ""
+  );
+});
+
 // Закрыть модальное окно
 const closeModal = () => {
   emit("update:modelValue", false);
+  // Сбрасываем ошибки при закрытии
+  nameError.value = "";
+  phoneError.value = "";
 };
 
 // Отправка формы
 const submitForm = () => {
-  emit("submit", { ...form.value });
+  // Валидируем все поля перед отправкой
+  const isNameValid = validateName();
+  const isPhoneValid = validatePhone();
+  
+  if (!isNameValid || !isPhoneValid) {
+    return;
+  }
+  
+  // Подготавливаем данные для отправки
+  const formData = {
+    name: form.value.name.trim(),
+    phone: form.value.phone.replace(/\D/g, ""), // Отправляем только цифры
+    description: form.value.description.trim(),
+  };
+  
+  emit("submit", formData);
 
   // Очистка формы после отправки
   form.value = {
@@ -135,6 +296,10 @@ const submitForm = () => {
     phone: "",
     description: "",
   };
+  
+  // Сбрасываем ошибки
+  nameError.value = "";
+  phoneError.value = "";
 
   // Закрыть модальное окно после отправки
   closeModal();

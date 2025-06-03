@@ -231,7 +231,7 @@ const handleFormSubmit = async (formData) => {
       },
       body: JSON.stringify({
         customerName: formData.name,
-        phoneNumber: formData.phone,
+        phoneNumber: formData.phone, // Теперь это будет строка только из цифр
         text: formData.description,
       }),
     });
